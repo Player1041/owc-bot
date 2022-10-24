@@ -10,12 +10,12 @@ class Ban(commands.Cog):
         self.bot = bot
     
     @commands.slash_command()
-    async def ban(self, inter, user: disnake.User, delete: commands.Range[0,14] = 0, reason: str = "| None"):
+    async def ban(self, inter, user: disnake.Member, delete: commands.Range[0,14] = 0, reason: str = "| None"):
         """
         Bans a user.
         Parameters
         ----------
-        user: A user to ban; takes @ and ID.
+        user: A user to ban; takes @.
         delete: How many days of message to delete. 0-14.
         reason: A reason to ban the user if there is one.
         """
